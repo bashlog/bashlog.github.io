@@ -5,12 +5,18 @@
   
   <entry>
     <title>在 FreeBSD 中使用 ZFS 文件系统搭建基础服务</title>
-    <link href="/2020/03/22/%E5%9C%A8%20FreeBSD%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20ZFS%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80%E6%9C%8D%E5%8A%A1/"/>
-    <url>/2020/03/22/%E5%9C%A8%20FreeBSD%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20ZFS%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80%E6%9C%8D%E5%8A%A1/</url>
+    <link href="/2020/05/09/%E5%9C%A8%20FreeBSD%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20ZFS%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80%E6%9C%8D%E5%8A%A1/"/>
+    <url>/2020/05/09/%E5%9C%A8%20FreeBSD%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20ZFS%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80%E6%9C%8D%E5%8A%A1/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="了解-zfs-文件系统的逻辑结构"><a href="#了解-zfs-文件系统的逻辑结构" class="headerlink" title="了解 zfs 文件系统的逻辑结构"></a>了解 zfs 文件系统的逻辑结构</h1><h2 id="一、列出当前系统中所有的硬盘"><a href="#一、列出当前系统中所有的硬盘" class="headerlink" title="一、列出当前系统中所有的硬盘"></a>一、列出当前系统中所有的硬盘</h2><pre><code class="tcsh">camcontrol devlist</code></pre><h2 id="二、创建（导入）-zfs-存储池"><a href="#二、创建（导入）-zfs-存储池" class="headerlink" title="二、创建（导入） zfs 存储池"></a>二、创建（导入） zfs 存储池</h2><h3 id="（一）当前系统不存在-zfs-存储池时（创建全新的-zfs-文件系统）"><a href="#（一）当前系统不存在-zfs-存储池时（创建全新的-zfs-文件系统）" class="headerlink" title="（一）当前系统不存在 zfs 存储池时（创建全新的 zfs 文件系统）"></a>（一）当前系统不存在 zfs 存储池时（创建全新的 zfs 文件系统）</h3>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>FreeBSD ZFS</tag>
+      
+    </tags>
     
   </entry>
   
@@ -18,12 +24,18 @@
   
   <entry>
     <title>Linux 使用 Samba 协议挂载共享目录</title>
-    <link href="/2020/03/22/Linux%20%E4%BD%BF%E7%94%A8%20Samba%20%E5%8D%8F%E8%AE%AE%E6%8C%82%E8%BD%BD%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/"/>
-    <url>/2020/03/22/Linux%20%E4%BD%BF%E7%94%A8%20Samba%20%E5%8D%8F%E8%AE%AE%E6%8C%82%E8%BD%BD%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/</url>
+    <link href="/2020/05/08/Linux%20%E4%BD%BF%E7%94%A8%20Samba%20%E5%8D%8F%E8%AE%AE%E6%8C%82%E8%BD%BD%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/"/>
+    <url>/2020/05/08/Linux%20%E4%BD%BF%E7%94%A8%20Samba%20%E5%8D%8F%E8%AE%AE%E6%8C%82%E8%BD%BD%E5%85%B1%E4%BA%AB%E7%9B%AE%E5%BD%95/</url>
     
-    <content type="html"><![CDATA[<h2 id="一、安装工具"><a href="#一、安装工具" class="headerlink" title="一、安装工具"></a>一、安装工具</h2><h4 id="RedHat-环境"><a href="#RedHat-环境" class="headerlink" title="RedHat 环境"></a>RedHat 环境</h4><pre><code class="bash">yum install cifs-utils</code></pre><h2 id="二、挂载目录"><a href="#二、挂载目录" class="headerlink" title="二、挂载目录"></a>二、挂载目录</h2><h4 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h4><pre><code class="bash">mount.cifs &lt;Source&gt; &lt;Destination&gt; -o {username=USERNAME,vers=3.0,uid=UserID,gid=GroupID}</code></pre><ul><li>&lt;source&gt; --- Samba Server 分享地址。例：//192.168.1.1/share</li><li>&lt;Destination&gt; --- 挂载点。例：/mnt/share</li><li>username=USERNAME --- Samba Server 共享用户名；依具体情况更改“USERNAME”参数</li><li>vers=3.0 --- Samba 协议版本</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="一、安装工具"><a href="#一、安装工具" class="headerlink" title="一、安装工具"></a>一、安装工具</h2><p><strong>RedHat 环境</strong></p><pre><code class="bash">yum install cifs-utils</code></pre><p><strong>Debain 环境</strong></p><pre><code class="bash">apt install cifs-utils</code></pre><h2 id="二、挂载目录"><a href="#二、挂载目录" class="headerlink" title="二、挂载目录"></a>二、挂载目录</h2><p><strong>命令格式：</strong></p><pre><code class="bash">mount.cifs &lt;Source&gt; &lt;Destination&gt; -o {username=USERNAME,vers=3.02,uid=UserID,gid=GroupID}</code></pre><ul><li><em>&lt;source&gt; --- Samba Server 分享地址。例：//192.168.1.1/share</em></li><li><em>&lt;Destination&gt; --- 挂载点。例：/mnt/share</em></li><li><em>username=USERNAME --- Samba Server 共享用户名；依具体情况更改“USERNAME”参数</em></li><li><em>vers=3.0 --- Samba 协议版本，例如：</em><ul><li><em>2.10 --- Windows 7 SP1</em></li><li><em>3.02 --- Windows 8.1</em></li><li><em>3.11 --- Windows 10</em></li></ul></li><li><em>uid --- 将本系统中的用户 ID 映射为被挂载对象的所有者</em></li><li><em>gid --- 将本系统中的用户组 ID 映射为被挂载对象的所属组</em><pre><code class="bash">id USERNAME 可得到 USERNAME 的具体 uid 与 gid</code></pre></li></ul><h2 id="三、通过-fstab-开机自动挂载"><a href="#三、通过-fstab-开机自动挂载" class="headerlink" title="三、通过 fstab 开机自动挂载"></a>三、通过 fstab 开机自动挂载</h2><p><strong>fstab 内容编写格式</strong></p><pre><code class="bash">被挂载对象             挂载点       文件系统类型     挂载选项//192.168.1.1/share   /mnt/share   cifs          credentials=/root/.smbcredentials,uid=UserID,gid=GroupID,vers=3.02 0 0 </code></pre><ul><li><em>credentials --- 证书</em><ul><li><em>.smbcredentials 文件中填写 用户名与用户密码（不推荐直接在 fstab 文件中填写用户名与密码）文件内容如下：</em></li><li><pre><code class="bash">username=USERNAMEpassword=PASSWORD</code></pre></li></ul></li></ul>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>Linux mount.cifs</tag>
+      
+    </tags>
     
   </entry>
   
